@@ -1,0 +1,30 @@
+.NavBar{
+    padding-left: 15px;
+    height: 5vh;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(58, 108, 151);
+}
+
+.NavLinks{
+    width: 50%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.NavLinks a{
+    color:white;
+    transition:color 0.5s;
+}
+
+.NavLinks a:hover{
+    color:rgb(79, 226, 153);
+}
+
+.logo{
+    height: 4vh;
+}

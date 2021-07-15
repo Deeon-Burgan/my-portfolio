@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+
+#about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+h1{
+    font-size: clamp(25px, 1vw, 80px);
+    margin-bottom: 10px;
+    color:rgb(79, 226, 153);
+}
+
+h2{
+    font-size: clamp(40px, 8vw, 80px);
+    margin-bottom: 25px;
+    color:rgba(245, 234, 234, 0.897);
+}
+
+h3{
+    font-size: clamp(25px, 3vw, 80px);
+    margin-bottom: 25px;
+    color:rgba(255, 255, 255, 0.486);
+}
+
+#elevator-pitch{
+    font-size: clamp(20px, 1vw, 80px);
+    color:rgba(255, 255, 255, 0.705);
+    max-width: 500px;
+}
