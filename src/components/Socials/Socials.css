@@ -1,3 +1,6 @@
+#socials-div{
+}
+
 #socials-list{
     position:fixed;
     bottom: 0;
@@ -30,4 +33,32 @@
 .socials-link a:hover{
     transform: rotate(360deg);
     color:rgb(79, 226, 153);
+}
+
+@media screen and (max-width: 700px) {
+    #socials-list{
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #socials-list::after{
+        content: "";
+        display: block;
+        width: 90px;
+        height: 1px;
+        margin: 0px auto;
+        background-color: white;
+    }
+
+    #socials-list::before{
+        content: "";
+        display: block;
+        width: 90px;
+        height: 1px;
+        margin: 0px auto;
+        background-color: white;
+    }
 }

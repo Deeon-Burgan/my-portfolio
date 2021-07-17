@@ -6,7 +6,7 @@ import Socials from '../Socials/Socials'
 export default function HomePage() {
     return (
         <>
-        <body className='container'>
+        <body className='container' id='home-container'>
             <About />
             <Socials />
         </body>
