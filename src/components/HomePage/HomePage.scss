@@ -1,5 +1,7 @@
+@import '../../globals.scss';
+
 .container{
-    background-color: rgb(13, 38, 61);
+    background-color: $dark-background;
     height: 95vh;
 }
 

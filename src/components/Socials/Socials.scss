@@ -1,3 +1,5 @@
+@import '../../globals.scss';
+
 #socials-div{
 }
 
@@ -32,7 +34,7 @@
 
 .socials-link a:hover{
     transform: rotate(360deg);
-    color:rgb(79, 226, 153);
+    color:$primary-color;
 }
 
 @media screen and (max-width: 700px) {

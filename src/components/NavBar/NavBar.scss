@@ -1,3 +1,5 @@
+@import '../../globals.scss';
+
 .NavBar{
     padding-left: 15px;
     height: 5vh;
@@ -5,7 +7,7 @@
     flex-direction:row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(58, 108, 151);
+    background-color: $lighter-background;
 }
 
 .NavLinks{
@@ -22,7 +24,7 @@
 }
 
 .NavLinks a:hover{
-    color:rgb(79, 226, 153);
+    color:$primary-color;
 }
 
 .logo{
