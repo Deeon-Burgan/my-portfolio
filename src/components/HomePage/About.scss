@@ -16,23 +16,23 @@
 h1{
     font-size: clamp(25px, 1vw, 80px);
     margin-bottom: 10px;
-    color:$text-color;
+    color:$text;
 }
 
 h2{
     font-size: clamp(40px, 8vw, 80px);
     margin-bottom: 25px;
-    color:$primary-color;
+    color:$heading;
 }
 
 h3{
     font-size: clamp(25px, 3vw, 80px);
     margin-bottom: 25px;
-    color:$subheading-color;
+    color:$accent;
 }
 
 #elevator-pitch{
     font-size: clamp(20px, 1vw, 80px);
-    color:$text-color;
+    color:$text;
     max-width: 500px;
 }

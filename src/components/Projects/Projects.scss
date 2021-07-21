@@ -1,8 +1,11 @@
+@import '../../globals.scss';
+
 #projects-container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $background;
 
     ul{
         list-style: none;
@@ -32,6 +35,9 @@
     h1{
         font-size: 50px;
         margin-bottom: 30px;
+        color:$heading;
+        font-family: $main-font;
+        text-transform: uppercase;
     }
 }
 
@@ -46,13 +52,15 @@
 
 .project-display{
     // background-color: rgba(0, 0, 0, 0.726);
-    width: 20%;
+    width: 25%;
+    max-width: 300px;
     margin: 10px 10px;
     display:flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
+    box-shadow: 6px 7px 20px 5px rgba(102,102,102,0.75);
 
     h3{
         border-radius: 15px;
@@ -60,7 +68,7 @@
         visibility:hidden;
         position: absolute;
         margin:0;
-        color:white;
+        color:$heading;
         text-align: center;
         transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
     }

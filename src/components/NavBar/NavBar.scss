@@ -7,7 +7,7 @@
     flex-direction:row;
     justify-content: space-between;
     align-items: center;
-    background-color: $lighter-background;
+    background-color: $lightbg;
 }
 
 .NavLinks{
@@ -24,7 +24,7 @@
 }
 
 .NavLinks a:hover{
-    color:$primary-color;
+    color:$heading;
 }
 
 .logo{

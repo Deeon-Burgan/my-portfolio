@@ -1,0 +1,85 @@
+@import '../../globals.scss';
+
+#about{
+
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas:". . . ."
+                        ". image about ."
+                        ". education experience ."
+                        ". skills experience .";
+
+    // overflow-y: hidden;
+    height: auto;
+
+    h4{
+        color: $lightbg;
+    }
+
+    li{
+        color: $text;
+    }
+
+    h3{
+        color:$heading;
+        text-align: center;
+    }
+
+    #profile-image{
+        grid-area: image;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        width: 50%;
+    }
+
+    #about-section{
+        grid-area: about;
+        p{
+            color:$text;
+        }
+    }
+
+    #skills-section{
+        grid-area: skills;
+    }
+
+    #experience-section{
+        grid-area: experience;
+        ul{
+            div{
+                margin-bottom: 15px;
+                h4{
+                    color: $heading;
+                }
+
+                p{
+                    color:$lightbg;
+                }
+            }
+        }
+    }
+
+    #education-section{
+        grid-area: education;
+        text-align: center;
+        max-height: max-content;
+
+        ul{
+            padding: 0;
+            div{
+                margin-bottom: 15px;
+                h4{
+                    margin-bottom: 5px;
+                }
+                p{
+                    color:$text;
+                }
+            }
+        }
+    }
+}
