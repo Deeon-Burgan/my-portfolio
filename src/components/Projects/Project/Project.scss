@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 95vh;
+    height: auto;
 
     img{
         width: 10%;
@@ -17,7 +19,7 @@
     #description-tasks{
         display:flex;
         flex-direction: row;
-        width: 50%;
+        width: 75%;
 
         div{
             width: 50%;
@@ -31,6 +33,46 @@
             }
 
             color:$text;
+        }
+    }
+}
+
+#projectImageGallery{
+    display: flex;
+    align-items: center;
+    position:relative;
+    justify-content: center;
+    height: 250px;
+    width: 100vw;
+    overflow-x: hidden;
+
+    .slider{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+        align-items: center;
+        justify-content: center;
+        
+        #snippet-container{
+            display: flex;
+            justify-content: center;
+            width:100vw;
+        }
+    }
+
+    .arrow{
+        position:absolute;
+        cursor: pointer;
+        z-index: 1;
+
+        &.right{
+            right: 100px;
+        }
+
+        &.left{
+            left: 100px;
         }
     }
 }

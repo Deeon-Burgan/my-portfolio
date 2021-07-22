@@ -1,15 +1,25 @@
 import React from 'react';
 import './Project.scss';
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { Redirect } from 'react-router';
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai'
 
 export default function Project(props) {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     if(!!!props.location.state){
         return <Redirect to='/projects'/>;
     }
 
-    const {projectName, projectDescription, projectImage, projectGithub, projectLink, projectTasks, projectVideo} = props.location.state;
+    const {projectName, projectDescription, projectImage, projectGithub, projectLink, projectTasks, projectVideo, projectSummary, codeSnippets} = props.location.state;
+
+
+    const handleArrowPress = (way) => {
+        way === "left"
+          ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+          : setCurrentSlide(currentSlide < codeSnippets.length - 1 ? currentSlide + 1 : 0);
+      };
 
     return (
         <div className="container" id='project-container'>
@@ -19,6 +29,10 @@ export default function Project(props) {
                 <div id='description'>
                     <h3>What is it?</h3>
                     <p>{projectDescription}</p>
+                </div>
+                <div>
+                    <h3>Where did I come in?</h3>
+                    <p>{projectSummary}</p>
                 </div>
                 <div id='tasks'>
                     <h3>What did I do?</h3>
@@ -34,6 +48,17 @@ export default function Project(props) {
                 {!!projectGithub && <a href={projectGithub} target='_blank'>GitHub</a>}
                 {!!projectLink && <a href={projectLink} target='_blank'>Link to project</a>}
             </div>
+            { codeSnippets && <div className="ImageGallery" id="projectImageGallery">
+                <AiOutlineArrowLeft className='arrow left' onClick={()=> handleArrowPress(true)}/>
+                <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw`}}>
+                    {codeSnippets.map((pic, id)=>{
+                        return <div id='snippet-container' key={id}>
+                            <img src={pic} alt="" />
+                        </div>
+                    })}
+                </div>
+                <AiOutlineArrowRight className='arrow right' onClick={()=> handleArrowPress(false)}/>
+            </div>}
         </div>
     )
 }
