@@ -48,7 +48,7 @@ export default function Project(props) {
                 {!!projectGithub && <a href={projectGithub} target='_blank'>GitHub</a>}
                 {!!projectLink && <a href={projectLink} target='_blank'>Link to project</a>}
             </div>
-            { codeSnippets && <div className="ImageGallery" id="projectImageGallery">
+            { !!codeSnippets?.length && (<div className="ImageGallery" id="projectImageGallery">
                 <AiOutlineArrowLeft className='arrow left' onClick={()=> handleArrowPress(true)}/>
                 <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw`}}>
                     {codeSnippets.map((pic, id)=>{
@@ -58,7 +58,7 @@ export default function Project(props) {
                     })}
                 </div>
                 <AiOutlineArrowRight className='arrow right' onClick={()=> handleArrowPress(false)}/>
-            </div>}
+            </div>)}
         </div>
     )
 }

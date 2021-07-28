@@ -34,6 +34,24 @@
 
             color:$text;
         }
+
+        @media screen and (max-width: 680px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            div{
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px){
+    #project-video{
+        width: 75%;
     }
 }
 

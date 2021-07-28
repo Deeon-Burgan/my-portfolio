@@ -10,8 +10,14 @@
                         ". education experience ."
                         ". skills experience .";
 
+    @media screen and (max-width: 680px){
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
     // overflow-y: hidden;
-    height: auto;
+    // height: auto;
 
     h4{
         color: $lightbg;

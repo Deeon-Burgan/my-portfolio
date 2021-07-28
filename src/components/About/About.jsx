@@ -4,7 +4,7 @@ import './About.scss'
 export default function About(){
 
     const myData = {
-        image:'https://deeonburgan.me/Images/myface2.jpg',
+        image:'https://lucid-bhabha-55c936.netlify.app/Images/myface2.jpg',
         about:`Hey there! \n My name's Deeon, I'm a games development professional with 2 years experience in the industry.
          I completed my studies from the Academy of Interactive Entertainment in 2019, 
          and since then I have been working with an indie team I co-founded with some classmates, called Magic Missile.
@@ -74,7 +74,7 @@ export default function About(){
     return (
         <div className='container' id='about'>
             <div id='profile-image'>
-            <img src="https://deeonburgan.me/Images/myface2.jpg" alt="" />
+            <img src={myData.image} alt="" />
             </div>
             <div id='about-section'>
                 <h3>About Me</h3>

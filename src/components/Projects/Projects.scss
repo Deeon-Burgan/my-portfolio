@@ -39,6 +39,12 @@
         font-family: $main-font;
         text-transform: uppercase;
     }
+
+
+
+    @media screen and (max-width: 680px) {
+        height: auto;
+    }
 }
 
 .projects-container{
@@ -53,6 +59,7 @@
 .project-display{
     // background-color: rgba(0, 0, 0, 0.726);
     width: 25%;
+    min-width: 150px;
     max-width: 300px;
     margin: 10px 10px;
     display:flex;
