@@ -24,6 +24,20 @@ export default function Projects() {
     }
 
     const data = {
+        LakeEildonMotel:{
+            projectName:'Lake Eildon Motel Client and Admin Website',
+            projectDescription:`A full stack (Ruby on rails, React) staff and client application for the Lake Eildon Motel.`,
+            projectSummary:`My final project at AIT was a group project that required us to use at the minimum React and Ruby on Rails, to create a full-stack application
+            for a business or company. My group partner, Matthew Sterling's family run the Lake Eildon Motel, and their current website could be seen 
+            as outdated, and so, we decided we would modernize it, and use this opportunity to create an online booking system for them, so they could stop
+            using a pen and paper system.`,
+            projectTasks: ['Design and implement a number of front-end pages using React and MaterialUI', 'Setup a number of react stores', 'Create reusable React components', 'Implement logic required by components using TypeScript'],
+            projectImage: 'https://eildonlakemotel.netlify.app/static/media/bannerLogo.02a11922.png',
+            projectGithub: '',
+            projectLink: 'https://www.eildonlakemotel.netlify.app',
+            projectVideo:'',
+            codeSnippets:[]
+        },
         PicoTanks:{
             projectName:'Pico Tanks',
             projectDescription:`Pico Tanks is a fast-paced, energetic 3v3 tank brawler with a strong focus on team strategy.
