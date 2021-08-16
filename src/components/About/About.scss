@@ -10,6 +10,9 @@
                         ". education experience ."
                         ". skills experience .";
 
+    min-height: 95vh;
+    height: auto;
+
     @media screen and (max-width: 680px){
         display: flex;
         flex-direction: column;

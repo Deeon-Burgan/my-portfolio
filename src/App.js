@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link, Route, BrowserRouter as Router} from 'react-router-dom'
 import HomePage from './components/HomePage/HomePage';
 import NavBar from './components/NavBar/NavBar';
@@ -10,6 +10,11 @@ import Project from './components/Projects/Project/Project';
 import About from './components/About/About'
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Deeon's portfolio";
+  }, [])
+
   return (
     <Router>
       <NavBar />

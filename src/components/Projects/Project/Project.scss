@@ -3,17 +3,19 @@
 #project-container{
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: space-around;
     align-items: center;
     min-height: 95vh;
     height: auto;
 
     img{
-        width: 10%;
+        height: 20%;
     }
 
     #project-title{
         font-size: 50px;
+        color: $heading;
+        margin: 5%;
     }
 
     #description-tasks{
@@ -26,10 +28,30 @@
             display:flex;
             flex-direction: column;
             align-items: center;
-            // justify-content: center;
+
+            background: rgba(255, 255, 255, 0.082);
+            border: 2px solid #D5EDEC;
+            margin: 5px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
             h3{
                 text-align: center;
+                margin: 5px;
+                width: auto;
+
+                &::after{
+                    display: block;
+                    content: '';
+                    width: 100%;
+                    height: 2.5px;
+                    background: $heading;
+                }
+            }
+
+            p{
+                width: 75%;
+                text-align: center;
+                margin: 5px;
             }
 
             color:$text;

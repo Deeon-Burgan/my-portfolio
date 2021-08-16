@@ -2,7 +2,8 @@ import React from 'react';
 import './Project.scss';
 import {useEffect, useState} from 'react'
 import { Redirect } from 'react-router';
-import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai'
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
+import Gallery from '../../Partials/Gallery/Gallery';
 
 export default function Project(props) {
 
@@ -48,17 +49,7 @@ export default function Project(props) {
                 {!!projectGithub && <a href={projectGithub} target='_blank'>GitHub</a>}
                 {!!projectLink && <a href={projectLink} target='_blank'>Link to project</a>}
             </div>
-            { !!codeSnippets?.length && (<div className="ImageGallery" id="projectImageGallery">
-                <AiOutlineArrowLeft className='arrow left' onClick={()=> handleArrowPress(true)}/>
-                <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw`}}>
-                    {codeSnippets.map((pic, id)=>{
-                        return <div id='snippet-container' key={id}>
-                            <img src={pic} alt="" />
-                        </div>
-                    })}
-                </div>
-                <AiOutlineArrowRight className='arrow right' onClick={()=> handleArrowPress(false)}/>
-            </div>)}
+            {!!codeSnippets?.length && <Gallery images={codeSnippets}/>}
         </div>
     )
 }
